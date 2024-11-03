@@ -10,11 +10,13 @@ class App extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.black,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ClockWidget(),
-          ],
+        body: Center(
+          child: FractionallySizedBox(
+              widthFactor: 0.9,
+              heightFactor: 0.9,
+              child: Column(
+                children: [ClockWidget()],
+              )),
         ),
       ),
     );

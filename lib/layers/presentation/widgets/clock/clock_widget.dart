@@ -62,26 +62,44 @@ class _ClockWidgetState extends State<ClockWidget> {
     return Expanded(
       child: Row(
         children: <Widget>[
-          Flexible(flex: 2, child: StaticFlipdotCharacter(hour[0])),
-          Flexible(flex: 2, child: StaticFlipdotCharacter(hour[1])),
+          Flexible(flex: 10, child: StaticFlipdotCharacter(hour[0])),
           const Flexible(
-            flex: 1,
+            flex: 2,
+            child: AspectRatio(
+              aspectRatio: 1 / 7.0,
+            ),
+          ),
+          Flexible(flex: 10, child: StaticFlipdotCharacter(hour[1])),
+          const Flexible(
+            flex: 5,
             child: AspectRatio(
               aspectRatio: 2.5 / 7.0,
               child: ClockSemicolonWidget(),
             ),
           ),
-          Flexible(flex: 2, child: StaticFlipdotCharacter(minute[0])),
-          Flexible(flex: 2, child: StaticFlipdotCharacter(minute[1])),
+          Flexible(flex: 10, child: StaticFlipdotCharacter(minute[0])),
           const Flexible(
-            flex: 1,
+            flex: 2,
+            child: AspectRatio(
+              aspectRatio: 1 / 7.0,
+            ),
+          ),
+          Flexible(flex: 10, child: StaticFlipdotCharacter(minute[1])),
+          const Flexible(
+            flex: 5,
             child: AspectRatio(
               aspectRatio: 2.5 / 7.0,
               child: ClockSemicolonWidget(),
             ),
           ),
-          Flexible(flex: 2, child: StaticFlipdotCharacter(second[0])),
-          Flexible(flex: 2, child: StaticFlipdotCharacter(second[1])),
+          Flexible(flex: 10, child: StaticFlipdotCharacter(second[0])),
+          const Flexible(
+            flex: 2,
+            child: AspectRatio(
+              aspectRatio: 1 / 7.0,
+            ),
+          ),
+          Flexible(flex: 10, child: StaticFlipdotCharacter(second[1])),
         ],
       ),
     );
